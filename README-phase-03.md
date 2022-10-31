@@ -124,3 +124,18 @@ climbingSteps(3);  // 4
 //   6. 3 steps + 1 steps
 climbingSteps(4);  // 6
 ```
+
+function findCoins(num, obj = {}, i = 0) {
+  let arr = [{coin: "quarters", n: 25}, {coin: "dimes", n: 10}, {coin: "nickels", n: 5}, {coin: "pennys", n: 1}]
+
+  let coinName = arr[i].coin;
+  let n = arr[i].n;
+
+  let numOfCoins = Math.floor(num / n);
+  obj[coinName] = numOfCoins;
+  num-= (numOfCoins * n);
+
+  if (!num) return obj;
+  return findCoins(num, obj, i + 1)
+
+}

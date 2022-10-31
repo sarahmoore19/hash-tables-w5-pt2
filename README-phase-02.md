@@ -14,7 +14,7 @@ Given two strings, determine whether the strings are anagrams of each other.
 Solve this in `O(n)` time.
 
 Example:
-
+  
 ```js
 anagrams('elvis', 'lives');     // => true
 anagrams('coding', 'rocks');    // => false
